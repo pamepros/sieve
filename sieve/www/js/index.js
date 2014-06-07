@@ -19,13 +19,13 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        getUserWatchList();
+        this.getUserWatchList();
         
     }, 
     getUserWatchList: function(){
         try{
             var url = "http://172.16.8.17:8080/tv/getTunedPrivate";
-            $.post(url, {}, function(result){
+            $.get(url, {}, function(result){
                 alert(result.audioTrack);
             },'json');
         }catch(e){console.log(e)}
