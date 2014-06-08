@@ -27,6 +27,7 @@ var app = {
             //checks what's being watched on the tv right now
             var url = "http://172.16.8.17:8080/tv/getTunedPrivate";
             $.get(url, {}, function(result){
+                console.log("contentId"+result.contentId);
                 app.getTMSId(result.contentId);
             },'json');
         }catch(e){console.log(e)}
@@ -35,8 +36,10 @@ var app = {
         try{
             //gets tms id from the tv show
             var url = "https://api.directvdev.com/cgi-bin/tms.php?contentId="+contentId;
+            console.log(url);
             $.get(url, {}, function(result){
                 alert(result.tms);
+                console.log("tms----"+result.tms);
                 app.getShowData(result.tms);
             },'json');
         }catch(e){console.log(e)}
@@ -44,8 +47,9 @@ var app = {
     getShowData: function(tmsId){
         //get metadata from tms id
         var url = "http://data.tmsapi.com/v1/programs/"+tmsId+"?api_key=xq345z55txpua6rdjp76vfbe"
+        console.log(url);
         $.get(url, {}, function(result){
-            alert("Title->"+result.title);
+            alert("Title -> "+result.title);
             app.saveTvShow(result);
         },'json');
     },
