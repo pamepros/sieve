@@ -97,7 +97,7 @@ var showList = [];
 		console.log(showList[i].showTitle + ' '+ showList[i].timesWatched + ' '+ showList[i].lastWatched + ' '+ showList[i].imageUrl);
 	}
 	currentShows = showList;
-	
+	app.showList(currentShows);
 }
 
 

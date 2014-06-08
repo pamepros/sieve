@@ -34,11 +34,13 @@ var app = {
         }catch(e){console.log(e)}
     },
     getTMSId: function(contentId){
-        try{
-            //gets tms id from the tv show
-            var url = "https://api.directvdev.com/cgi-bin/tms.php?contentId="+contentId;
-            console.log(url);
+
+        contentId = "1%201%20DDE8D%20ED";
+        //gets tms id from the tv show
+        var url = "https://api.directvdev.com/cgi-bin/tms.php?contentId="+contentId;
+        
             $.get(url, {}, function(result){
+                console.log(result);
                 var tms = 0;
                 if(!result.tms){
                     console.log("wrong result");
@@ -49,11 +51,13 @@ var app = {
                     console.log("tms----"+result.tms);
                 }
                 app.getShowData(tms);
-            },'json');
-        }catch(e){console.log(e)}
+            });
+        
     },
     getShowData: function(tmsId){
         //get metadata from tms id
+        tmsId = "EP002704300057"
+        //tmsId = "EP000170730077"
         var url = "http://data.tmsapi.com/v1/programs/"+tmsId+"?api_key=xq345z55txpua6rdjp76vfbe"
         console.log(url);
         $.get(url, {}, function(result){
@@ -64,22 +68,27 @@ var app = {
     saveTvShow: function(showData){
         //store tv show details on firebase
         
-        // only send title to fireBase if watch time => 10 minutes.
+        // TODO: only send title to fireBase if watch time => 10 minutes.
         logShow(showData.title, "http://demo.tmsimg.com/"+showData.preferredImage.uri,showData.tmsId, showData.seriesId);
-        
+        getShows();
         
     },
     showList: function(data){
+        console.log(data);
         var itemListHtml = "";
         // we fill the list with the movies
         for(var i=0;i<data.length;i++){
-            itemListHtml += '<li class="widget uib_w_3" data-uib="app_framework/listitem" data-ver="1">';
-            itemListHtml +=     '<a>List Item</a>';
-            itemListHtml += '</li>';
+            show = data[i];
+            itemListHtml += '<div class="square"';
+            itemListHtml += 'style="background-image: url(\''+show.imageUrl+'\');"'; 
+            itemListHtml += 'onclick="app.openShow("'+show.imageUrl+'");"></div>';
         }
-        $("#showsList").html = itemListHtml;
+        console.log(itemListHtml);
+        $("#showsList").html(itemListHtml);
     },
-    openShow: function(){
+    openShow: function(imageUrl){
+        
+        $("#imageShowPopup").css("background","url(\""+imageUrl+"\") no-repeat");
         $("#blurredcurtain").show();
     },
     closeCurtain: function(){
