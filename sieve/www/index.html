@@ -20,7 +20,8 @@
 			/* Intel native bridge is available */
 			var onDeviceReady=function(){
 			//hide splash screen
-			intel.xdk.device.hideSplashScreen();
+			    intel.xdk.device.hideSplashScreen();
+                app.onDeviceReady();
 			};
 			document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
 		</script>

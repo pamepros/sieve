@@ -56,7 +56,7 @@ var app = {
     },
     getShowData: function(tmsId){
         //get metadata from tms id
-        tmsId = "EP002704300057"
+        tmsId = "MV001409340000"
         //tmsId = "EP000170730077"
         var url = "http://data.tmsapi.com/v1/programs/"+tmsId+"?api_key=xq345z55txpua6rdjp76vfbe"
         console.log(url);
@@ -67,9 +67,10 @@ var app = {
     },
     saveTvShow: function(showData){
         //store tv show details on firebase
-        
+        var identifier = "";
         // TODO: only send title to fireBase if watch time => 10 minutes.
-        logShow(showData.title, "http://demo.tmsimg.com/"+showData.preferredImage.uri,showData.tmsId, showData.seriesId);
+        if(!showData.seriesId){identifier = showData.rootId}
+        logShow(showData.title, "http://demo.tmsimg.com/"+showData.preferredImage.uri,showData.tmsId, identifier);
         getShows();
         
     },
@@ -81,14 +82,14 @@ var app = {
             show = data[i];
             itemListHtml += '<div class="square"';
             itemListHtml += 'style="background-image: url(\''+show.imageUrl+'\');"'; 
-            itemListHtml += 'onclick="app.openShow("'+show.imageUrl+'");"></div>';
+            itemListHtml += 'onclick="app.openShow(\''+show.imageUrl+'\');"></div>';
         }
         console.log(itemListHtml);
         $("#showsList").html(itemListHtml);
     },
     openShow: function(imageUrl){
         
-        $("#imageShowPopup").css("background","url(\""+imageUrl+"\") no-repeat");
+        document.getElementById("imageShowPopup").style.backgroundImage = 'url("'+imageUrl+'")';
         $("#blurredcurtain").show();
     },
     closeCurtain: function(){
