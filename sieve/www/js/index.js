@@ -22,7 +22,7 @@ var app = {
         this.getUserWatchList();
         
     }, 
-    getUserWatchList: function(){
+    getUserWatchList: function(){ 
         try{
             //checks what's being watched on the tv right now
             var url = "http://172.16.8.17:8080/tv/getTunedPrivate";
@@ -46,11 +46,16 @@ var app = {
         var url = "http://data.tmsapi.com/v1/programs/"+tmsId+"?api_key=xq345z55txpua6rdjp76vfbe"
         $.get(url, {}, function(result){
             alert("Title->"+result.title);
-            saveTvShow(result);
+            app.saveTvShow(result);
         },'json');
     },
     saveTvShow: function(showData){
         //store tv show details on firebase
+        
+        // only send title to fireBase if watch time => 10 minutes.
+        logShow(showData.title);
+        
+        
     },
     showList: function(data){
         var itemListHtml = "";
