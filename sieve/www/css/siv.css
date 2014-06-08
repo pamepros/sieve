@@ -1,0 +1,92 @@
+@font-face{
+    font-family: Adequate-ExtraLight;
+    src: url("Adequate-ExtraLight.ttf");
+}
+
+html,
+body { height: 100%; }
+
+body {
+    display: table;
+    width: 100%;
+}
+.header {
+    height: 74px !important;
+}
+/* top bar: */
+.top-bar{
+    background: #52C778;
+}
+
+.top-bar .text-title{
+    font-family: Adequate-ExtraLight;
+    font-size: 40px !important;
+    color: #FFFFFF !important;
+    line-height: 66px !important;
+    text-align: center;
+    width: 100%;
+}
+
+#afui .grid-pad {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.footer {
+    background-color:#52C778 !important;	
+    color:#fff !important;	
+    text-align:center;
+}
+.footer p {	margin:0;	padding:10px}
+
+.square {
+    float: left;
+    position: relative;
+    height: auto;
+    width: 45%;
+    padding-bottom: 45%;
+    margin: 1.66%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footersquare {
+    float: left;
+    position: relative;
+    height: auto;
+    width: 20%;
+    padding-bottom: 15%;
+    margin: 1.86%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.icon-fav {
+    background-image: url('../img/remoteai.png');
+    background-size: 30px 30px;
+
+}
+
+.icon-rec {
+    background-image: url('../img/star.png');
+    background-size: 30px 30px;
+
+}
+
+.icon-rem {
+    background-image: url('../img/star.png');
+    background-size: 30px 30px;
+
+}
+
+.icon-set {
+    background-image: url('../img/star.png');
+    background-size: 30px 30px;
+}
+
+.img_1-1 {
+    background-image: url('../img/dj.annmovip.170x170-75.jpg');
+}
+
