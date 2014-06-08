@@ -85,7 +85,7 @@ function getShows() {
 function createList(snapshot) {
 var showList = [];
 	snapshot.forEach(function(childSnapshot) {
-	var tempShow = new Show(childSnapshot.name(),childSnapshot.child('showTitle').val(), childSnapshot.child('tmsId').val(), childSnapshot.child('seriesId').val(), childSnapshot.child('timesWatched').val(), childSnapshot.child('lastWatched').val(), childSnapshot.child('imageUrl').val());
+	var tempShow = new Show(childSnapshot.name(),childSnapshot.child('showTitle').val(), childSnapshot.child('tmsId').val(), childSnapshot.child('seriesId').val(), childSnapshot.child('timesWatched').val(), childSnapshot.child('lastWatched').val(), childSnapshot.child('imageUrl').val(), childSnapshot.child('channel').val());
 	console.log('hello' + tempShow.index);				
 	showList.push(tempShow);
 	});
@@ -102,7 +102,7 @@ var showList = [];
 
 
 
-function Show(index, showTitle, tmsId, seriesId, timesWatched, lastWatched, imageUrl) {
+function Show(index, showTitle, tmsId, seriesId, timesWatched, lastWatched, imageUrl, channel) {
 	this.index = index;
 	this.showTitle = showTitle;
 	this.tmsId = tmsId;
@@ -110,6 +110,7 @@ function Show(index, showTitle, tmsId, seriesId, timesWatched, lastWatched, imag
 	this.lastWatched = lastWatched;
 	this.imageUrl = imageUrl;
 	this.seriesId = seriesId;
+    this.channel = channel;
 	
 	//console.log(this.index + "  " + this.showTitle + "  " + this.timesWatched + "  " + this.lastWatched);
 

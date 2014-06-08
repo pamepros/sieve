@@ -82,13 +82,14 @@ var app = {
             show = data[i];
             itemListHtml += '<div class="square"';
             itemListHtml += 'style="background-image: url(\''+show.imageUrl+'\');"'; 
-            itemListHtml += 'onclick="app.openShow(\''+show.imageUrl+'\');"></div>';
+            itemListHtml += 'onclick="app.openShow(\''+show.imageUrl+'\','+show.channel+','+show.seriesId+');"></div>';
         }
         console.log(itemListHtml);
         $("#showsList").html(itemListHtml);
     },
-    openShow: function(imageUrl){
+    openShow: function(imageUrl, channel, seriesId){
         
+        $("#playShowBtt").click(function(){console.log(channel);changeChannel(channel)});
         document.getElementById("imageShowPopup").style.backgroundImage = 'url("'+imageUrl+'")';
         $("#blurredcurtain").show();
     },
