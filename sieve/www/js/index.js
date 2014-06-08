@@ -24,6 +24,7 @@ var app = {
     }, 
     getUserWatchList: function(){
         try{
+            //checks what's being watched on the tv right now
             var url = "http://172.16.8.17:8080/tv/getTunedPrivate";
             $.get(url, {}, function(result){
                 app.getTMSId(result.contentId);
@@ -32,6 +33,7 @@ var app = {
     },
     getTMSId: function(contentId){
         try{
+            //gets tms id from the tv show
             var url = "https://api.directvdev.com/cgi-bin/tms.php?contentId="+contentId;
             $.get(url, {}, function(result){
                 alert(result.tms);
@@ -40,11 +42,15 @@ var app = {
         }catch(e){console.log(e)}
     },
     getShowData: function(tmsId){
+        //get metadata from tms id
         var url = "http://data.tmsapi.com/v1/programs/"+tmsId+"?api_key=xq345z55txpua6rdjp76vfbe"
         $.get(url, {}, function(result){
-            alert("Title->"+result.title)
-            console.log(result);
+            alert("Title->"+result.title);
+            saveTvShow(result);
         },'json');
+    },
+    saveTvShow: function(showData){
+        //store tv show details on firebase
     },
     showList: function(data){
         var itemListHtml = "";
@@ -56,10 +62,4 @@ var app = {
         }
         $("#showsList").html = itemListHtml;
     }
-};try{
-            var url = "http://172.16.8.17:8080/tv/getTunedPrivate";
-            $.get(url, {}, function(result){
-                //alert(result.contentId);
-                app.getTMSId(result.contentId);
-            },'json');
-        }catch(e){console.log(e)}
+}
