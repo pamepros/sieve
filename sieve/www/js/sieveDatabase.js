@@ -6,6 +6,7 @@ var userShows = userData.child('shows');
 
 logShow('Brady_Bunch', 'colin.com/img', '1234', '1234');
 	
+	var currentShows = [];
 //var showList = [];
 
 getShows();
@@ -95,6 +96,8 @@ var showList = [];
 	for(var i = 0; i < showList.length; i++) {
 		console.log(showList[i].showTitle + ' '+ showList[i].timesWatched + ' '+ showList[i].lastWatched + ' '+ showList[i].imageUrl);
 	}
+	currentShows = showList;
+	
 }
 
 
