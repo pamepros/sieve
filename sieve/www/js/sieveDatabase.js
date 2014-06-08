@@ -6,7 +6,7 @@ var userShows = userData.child('shows');
 //logShow('Brady_Bunch', 5, 10);
 	
 
-function logShow(showTitle) {
+function logShow(showTitle, showImg, showTms) {
 
 	var alreadyListed = false;
 	var snap;
@@ -38,7 +38,7 @@ function logShow(showTitle) {
 		if(alreadyListed == false) {
 			console.log('creating new listing!');
 			// Create a new listing for the show
-			userShows.push({showTitle: showTitle, timesWatched: 1});
+			userShows.push({showTitle: showTitle, showImg: showImg, showTms: showTms, timesWatched: 1});
 		}
 	})
 }

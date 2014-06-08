@@ -65,7 +65,7 @@ var app = {
         //store tv show details on firebase
         
         // only send title to fireBase if watch time => 10 minutes.
-        logShow(showData.title);
+        logShow(showData.title, "http://demo.tmsimg.com/"+showData.preferredImage.uri,showData.tmsId);
         
         
     },
@@ -78,5 +78,11 @@ var app = {
             itemListHtml += '</li>';
         }
         $("#showsList").html = itemListHtml;
+    },
+    openShow: function(){
+        $("#blurredcurtain").show();
+    },
+    closeCurtain: function(){
+        $("#blurredcurtain").hide();
     }
 }

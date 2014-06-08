@@ -51,20 +51,45 @@
 						<div class="widget-container content-area horiz-area wrapping-col left"></div>
 						<div class="widget-container content-area horiz-area wrapping-col right"></div>
 					</header>
+                    <div class="upage-content" id="blurredcurtain" style="display:none;">
+                        <div class="grid grid-pad urow uib_row_5 row-height-5" data-uib="layout/row">
+                          <div class="col uib_col_6 col-0_12-12" data-uib="layout/col">
+                            <div class="widget-container content-area vertical-col">
+                                <div onclick="app.closeCurtain();" class="close-icon"></div>
+                                <div class="show-image"></div>
+                                <div class="play-over-img"></div>
+                                <div class="play-btt-img"></div>
+                                <div class="episode-txt">episode 4, season 3</div>
+                                <div class="gray-line"></div>
+                                <div class="tune-txt">tune in with</div>
+                                <div class="friends-list">
+                                    <div class="friends-tune-in img1"></div>
+                                    <div class="friends-tune-in img2"></div>
+                                    <div class="friends-tune-in img3"></div>
+                                    <div class="friends-tune-in img4"></div>
+                                    <div class="friends-tune-in img5"></div>
+                                </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        
+					</div>
+                    <!-- /curtain blurred -->
 					<div class="upage-content" id="mainsub">
                         <div class="grid grid-pad urow uib_row_5 row-height-5" data-uib="layout/row">
                           <div class="col uib_col_6 col-0_12-12" data-uib="layout/col">
                             <div class="widget-container content-area vertical-col">
-                                <div class="square img_1-1"></div>
-                                <div class="square img_1-1"></div>
-                                <div class="square img_1-1"></div>
-                                <div class="square img_1-1"></div>
-                                <div class="square img_1-1"></div>
-                                <div class="square img_1-1"></div>
-                                <div class="square img_1-1"></div>
-                                <div class="square img_1-1"></div>
-                                <div class="square img_1-1"></div>
-                                <div class="square img_1-1"></div>
+                                <div class="square img_1-1" onclick="app.openShow();"></div>
+                                <div class="square img_1-1" onclick="app.openShow();"></div>
+                                <div class="square img_1-1" onclick="app.openShow();"></div>
+                                <div class="square img_1-1" onclick="app.openShow();"></div>
+                                <div class="square img_1-1" onclick="app.openShow();"></div>
+                                <div class="square img_1-1" onclick="app.openShow();"></div>
+                                <div class="square img_1-1" onclick="app.openShow();"></div>
+                                <div class="square img_1-1" onclick="app.openShow();"></div>
+                                <div class="square img_1-1" onclick="app.openShow();"></div>
+                                <div class="square img_1-1" onclick="app.openShow();"></div>
                             </div>
                           </div>
 
@@ -72,7 +97,8 @@
                         
 					</div>
 					<!-- /upage-content -->
-
+                    
+                    
 				</div>
 				<!-- /upage-outer -->
 
