@@ -16,7 +16,7 @@ var test;
 var test2 = [];
 
 
-function logShow(tmsId ,showTitle, imageUrl) {
+function logShow(showTitle, imageUrl, tmsId) {
 
 	var alreadyListed = false;
 	var snap;
