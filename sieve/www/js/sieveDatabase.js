@@ -4,19 +4,19 @@ var userData = data.child('Users');
 var userShows = userData.child('shows');
 
 
-logShow('Brady_Bunch', 'colin.com/img');
+logShow('Brady_Bunch', 'colin.com/img', '1234', '1234');
 	
 //var showList = [];
 
 getShows();
-getChannels();
+//getChannels();
 var test;
 
 
 var test2 = [];
 
 
-function logShow(showTitle, imageUrl, tmsId) {
+function logShow(showTitle, imageUrl, tmsId, seriesId) {
 
 	var alreadyListed = false;
 	var snap;
@@ -55,7 +55,7 @@ function logShow(showTitle, imageUrl, tmsId) {
 			var timeWatched = new Date();
 			timeWatched.getTime();
 			//console.log(timeWatched);
-			userShows.push({showTitle: showTitle, tmsId: tmsId, timesWatched: 1, lastWatched: timeWatched, imageUrl: imageUrl});
+			userShows.push({showTitle: showTitle, tmsId: tmsId, seriesId: seriesId, timesWatched: 1, lastWatched: timeWatched, imageUrl: imageUrl});
 		}
 	})
 	
@@ -84,7 +84,7 @@ function getShows() {
 function createList(snapshot) {
 var showList = [];
 	snapshot.forEach(function(childSnapshot) {
-	var tempShow = new Show(childSnapshot.name(),childSnapshot.child('showTitle').val(), childSnapshot.child('tmsId').val(), childSnapshot.child('timesWatched').val(), childSnapshot.child('lastWatched').val(), childSnapshot.child('imageUrl').val());
+	var tempShow = new Show(childSnapshot.name(),childSnapshot.child('showTitle').val(), childSnapshot.child('tmsId').val(), childSnapshot.child('seriesId').val(), childSnapshot.child('timesWatched').val(), childSnapshot.child('lastWatched').val(), childSnapshot.child('imageUrl').val());
 	console.log('hello' + tempShow.index);				
 	showList.push(tempShow);
 	});
@@ -98,17 +98,20 @@ var showList = [];
 }
 
 
-function Show(index, showTitle, tmsId, timesWatched, lastWatched, imageUrl) {
+
+function Show(index, showTitle, tmsId, seriesId, timesWatched, lastWatched, imageUrl) {
 	this.index = index;
 	this.showTitle = showTitle;
 	this.tmsId = tmsId;
 	this.timesWatched = timesWatched;
 	this.lastWatched = lastWatched;
 	this.imageUrl = imageUrl;
+	this.seriesId = seriesId;
 	
 	//console.log(this.index + "  " + this.showTitle + "  " + this.timesWatched + "  " + this.lastWatched);
 
 }
+/*
 
 function getChannels() {
 
@@ -127,3 +130,5 @@ function getChannels() {
 	
 //	http://data.tmsapi.com/v1/programs/SH014025350000/airings?lineupId=USA-NC32461-X&startDateTime=2013-09-21T00:00Z&includeDetail=true&api_key=1234567890
 }
+*/
+
