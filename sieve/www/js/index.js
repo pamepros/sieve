@@ -65,7 +65,7 @@ var app = {
         //store tv show details on firebase
         
         // only send title to fireBase if watch time => 10 minutes.
-        logShow(showData.title, "http://demo.tmsimg.com/"+showData.preferredImage.uri,showData.tmsId);
+        logShow(showData.title, "http://demo.tmsimg.com/"+showData.preferredImage.uri,showData.tmsId, showData.seriesId);
         
         
     },

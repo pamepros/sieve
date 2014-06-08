@@ -16,7 +16,7 @@ var test;
 var test2 = [];
 
 
-function logShow(showTitle, showImg, showTms) {
+function logShow(showTitle, showImg, showTms, seriesId) {
 
 	var alreadyListed = false;
 	var snap;
@@ -50,16 +50,12 @@ function logShow(showTitle, showImg, showTms) {
 		// If not already created, create a listing for this show
 		if(alreadyListed == false) {
 			console.log('creating new listing!');
-			// Create a new listing for the show
-<<<<<<< HEAD
-			userShows.push({showTitle: showTitle, showImg: showImg, showTms: showTms, timesWatched: 1});
-=======
-			
+			// Create a new listing for the show			
 			var timeWatched = new Date();
 			timeWatched.getTime();
 			//console.log(timeWatched);
 			userShows.push({showTitle: showTitle, tmsId: tmsId, timesWatched: 1, lastWatched: timeWatched, imageUrl: imageUrl});
->>>>>>> f70b8635af52beb998065567cc3dbd381b258866
+
 		}
 	})
 	
