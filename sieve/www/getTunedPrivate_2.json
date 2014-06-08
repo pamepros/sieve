@@ -1,0 +1,44 @@
+{
+  "audioTrack": "English",
+  "callsign": "INFO",
+  "category": {
+    "advisories": [],
+    "post": ["Series"],
+    "pre": []
+  },
+  "contentId": "1 1 170246 1",
+  "copyProtection": {
+    "analogConstraintRequired": false,
+    "dtcpCci": "copyFree",
+    "dviHdcpRequired": false,
+    "hdmiOutputOnly": false,
+    "watermarking": false
+  },
+  "credits": {
+    "actor": [],
+    "author": [],
+    "director": []
+  },
+  "description": "Series. Series.",
+  "duration": 3600,
+  "isHd": false,
+  "isOffAir": false,
+  "isPclocked": 3,
+  "isPpv": false,
+  "isRecording": false,
+  "isVod": false,
+  "major": 1,
+  "minor": 65535,
+  "offset": 2807,
+  "programId": "8421429",
+  "rating": "No Rating",
+  "startTime": 1402196400,
+  "stationId": 2768963,
+  "status": {
+    "code": 200,
+    "commandResult": 0,
+    "msg": "OK.",
+    "query": "/tv/getTunedPrivate"
+  },
+  "title": "Customer Information Channel"
+}

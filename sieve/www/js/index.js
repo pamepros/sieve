@@ -25,7 +25,8 @@ var app = {
     getUserWatchList: function(){ 
         try{
             //checks what's being watched on the tv right now
-            var url = "http://172.16.8.17:8080/tv/getTunedPrivate";
+            //var url = "http://172.16.8.17:8080/tv/getTunedPrivate";
+            var url = "./getTunedPrivate_3.json";
             $.get(url, {}, function(result){
                 console.log("contentId"+result.contentId);
                 app.getTMSId(result.contentId);
@@ -38,9 +39,16 @@ var app = {
             var url = "https://api.directvdev.com/cgi-bin/tms.php?contentId="+contentId;
             console.log(url);
             $.get(url, {}, function(result){
-                alert(result.tms);
-                console.log("tms----"+result.tms);
-                app.getShowData(result.tms);
+                var tms = 0;
+                if(!result.tms){
+                    console.log("wrong result");
+                    tms = result[0];
+                }else{
+                    tms = result.tms;
+                    alert(result.tms);
+                    console.log("tms----"+result.tms);
+                }
+                app.getShowData(tms);
             },'json');
         }catch(e){console.log(e)}
     },

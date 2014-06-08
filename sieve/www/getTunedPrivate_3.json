@@ -1,0 +1,49 @@
+{
+  "audioTrack": "English DD",
+  "callsign": "CNNHD",
+  "category": {
+    "advisories": [],
+    "post": [
+      "High-Def",
+      "Series"
+    ],
+    "pre": ["Documentary"]
+  },
+  "contentId": "1 1 1D412E 2",
+  "copyProtection": {
+    "analogConstraintRequired": false,
+    "dtcpCci": "copyFree",
+    "dviHdcpRequired": false,
+    "hdmiOutputOnly": false,
+    "watermarking": false
+  },
+  "credits": {
+    "actor": [],
+    "author": [],
+    "director": []
+  },
+  "date": "20140605",
+  "description": "\"The World on the Brink\" Documentary, Series. (2014) Discover how close the U.S. was to World War III during the Bay of Pigs and Cuban Missile crises. Documentary, Series.",
+  "duration": 3600,
+  "episodeTitle": "The World on the Brink",
+  "isHd": true,
+  "isOffAir": false,
+  "isPclocked": 3,
+  "isPpv": false,
+  "isRecording": false,
+  "isVod": false,
+  "major": 202,
+  "minor": 65535,
+  "offset": 2829,
+  "programId": "12102984",
+  "rating": "No Rating",
+  "startTime": 1402196400,
+  "stationId": 3900947,
+  "status": {
+    "code": 200,
+    "commandResult": 0,
+    "msg": "OK.",
+    "query": "/tv/getTunedPrivate"
+  },
+  "title": "The Sixties"
+}

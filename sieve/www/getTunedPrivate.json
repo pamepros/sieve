@@ -1,0 +1,50 @@
+{
+  "audioTrack": "English DD",
+  "callsign": "KABC",
+  "category": {
+    "advisories": [],
+    "post": [
+      "High-Def",
+      "CC",
+      "Series",
+      "Game Show"
+    ],
+    "pre": []
+  },
+  "contentId": "1 1 19BECE B",
+  "copyProtection": {
+    "analogConstraintRequired": false,
+    "dtcpCci": "copyFree",
+    "dviHdcpRequired": false,
+    "hdmiOutputOnly": false,
+    "watermarking": false
+  },
+  "credits": {
+    "actor": ["Peterman, Melissa"],
+    "author": [],
+    "director": []
+  },
+  "date": "20140607",
+  "description": "CC, Series, Game Show. (2014) Melissa Peterman. A 3-year-old must navigate an obstacle course with a glass of water without spilling most of it; twins are challenged to hold onto balloons while distracted by a remote-controlled car carrying a cupcake; a little girl mimics celebrity impersonations. CC, Series, Game Show.",
+  "duration": 3600,
+  "isHd": true,
+  "isOffAir": false,
+  "isPclocked": 3,
+  "isPpv": false,
+  "isRecording": false,
+  "isVod": false,
+  "major": 7,
+  "minor": 65535,
+  "offset": 2279,
+  "programId": "12144814",
+  "rating": "TV-PG",
+  "startTime": 1402196400,
+  "stationId": 2734943,
+  "status": {
+    "code": 200,
+    "commandResult": 0,
+    "msg": "OK.",
+    "query": "/tv/getTunedPrivate"
+  },
+  "title": "Bet on Your Baby"
+}

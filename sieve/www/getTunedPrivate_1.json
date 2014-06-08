@@ -1,0 +1,61 @@
+{
+  "audioTrack": "English DD",
+  "callsign": "KCBS",
+  "category": {
+    "advisories": [],
+    "post": [
+      "High-Def",
+      "CC",
+      "Series"
+    ],
+    "pre": [
+      "Drama",
+      "Mystery/Crime"
+    ]
+  },
+  "contentId": "1 1 138869 3E",
+  "copyProtection": {
+    "analogConstraintRequired": false,
+    "dtcpCci": "copyFree",
+    "dviHdcpRequired": false,
+    "hdmiOutputOnly": false,
+    "watermarking": false
+  },
+  "credits": {
+    "actor": [
+      "Selleck, Tom",
+      "Wahlberg, Donnie",
+      "Moynahan, Bridget",
+      "Estes, Will",
+      "Cariou, Len",
+      "Carlson, Amy",
+      "Gayle, Sami"
+    ],
+    "author": ["Truly, Dan"],
+    "director": ["Barrett, Dave"]
+  },
+  "date": "20130315",
+  "description": "\"No Regrets\" Drama, Mystery/Crime, CC, Series. (2013) Tom Selleck, Donnie Wahlberg, Bridget Moynahan, Will Estes, Len Cariou, Amy Carlson, Sami Gayle. When the same tragedy occurs to multiple people in New York, Danny must determine what connects them and who is responsible; Frank tries to help a friend face his alcoholism. Drama, Mystery/Crime, CC, Series.",
+  "duration": 3600,
+  "episodeTitle": "No Regrets",
+  "isHd": true,
+  "isOffAir": false,
+  "isPclocked": 3,
+  "isPpv": false,
+  "isRecording": false,
+  "isVod": false,
+  "major": 2,
+  "minor": 65535,
+  "offset": 2620,
+  "programId": "10113516",
+  "rating": "TV-14-L-V",
+  "startTime": 1402196400,
+  "stationId": 2734941,
+  "status": {
+    "code": 200,
+    "commandResult": 0,
+    "msg": "OK.",
+    "query": "/tv/getTunedPrivate"
+  },
+  "title": "Blue Bloods"
+}
